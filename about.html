@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About MARS GYM</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Style the navigation bar */
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        li.nav-item a:hover {
+            background-color: #5cb85c; /* Green */
+        }
+
+        /* Container Styles */
+        .container {
+            background-color: #f5f5f5;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Premium Header Styles */
+        h1 {
+            font-family: 'Helvetica Neue', sans-serif;
+            font-size: 36px;
+            color: #333;
+            margin: 0;
+        }
+
+        /* Quote Marquee */
+        .marquee {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-text {
+            display: inline-block;
+            animation: scrollText 20s linear infinite;
+        }
+
+        @keyframes scrollText {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item"><a href="file:///C:/Users/Dell/Desktop/home.html">Home</a></li>
+        <li class="nav-item"><a href="login.html">Login</a></li>
+        <li class="nav-item"><a href="conclusion.html">Reservation</a></li>
+        <li class="nav-item"><a href="cancel.html">Cancellation</a></li>
+        <li class="nav-item"><a href="sub.html">Subscription</a></li>
+    </ul>
+
+    <div class="container">
+        <h1>About MARS GYM</h1>
+        <div class="marquee">
+            <span class="marquee-text">"In the gym, you're not just lifting weights; you're lifting your spirit. It's a place where sweat and dedication turn dreams into reality, one rep at a time."</span>
+        </div>
+        <!-- Add gym information and description here -->
+        <p>Welcome to MARS GYM, where your fitness journey begins. We are dedicated to helping you achieve your fitness goals with state-of-the-art equipment and experienced trainers. Our mission is to empower you to become the best version of yourself through dedication and hard work.</p>
+    </div>
+</body>
+</html>

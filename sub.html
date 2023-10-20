@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Subscription</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0;
+            color: #333;
+        }
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        li.nav-item a:hover {
+            background-color: #5cb85c; /* Green */
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #222;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item"><a href="home.html">Home</a></li>
+        <li class="nav-item"><a href="login.html">Login</a></li>
+        <li class="nav-item"><a href="conclusion.html">Reservation</a></li>
+        <li class="nav-item"><a href="cancel.html">Cancellation</a></li>
+        <li class="nav-item"><a href="sub.html">Subscription</a></li>
+        <li class="nav-item"><a href="About.html">About</a></li>
+
+    </ul>
+    <div class="container">
+        <h1>Subscribe to Our Gym</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="membership">Membership Plan:</label>
+            <select id="membership" name="membership" required>
+                <option value="basic">Basic</option>
+                <option value="premium">Premium</option>
+                <option value="pro">Pro</option>
+            </select>
+
+            <input type="submit" value="Subscribe">
+        </form>
+    </div>
+</body>
+</html>

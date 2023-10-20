@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Schedule Reservation</title>
+    <style>
+        /* Add your CSS styles here */
+        /* Style available and reserved timeslots */
+        .timeslot {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .container {
+            background-color: #f5f5f5;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+
+        .available {
+            background-color: #5cb85c; /* Green */
+            color: #fff;
+        }
+        ul.nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+        li.nav-item {
+            float: left;
+        }
+
+        li.nav-item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        li.nav-item a:hover {
+            background-color: #5cb85c; /* Green */
+        }
+
+        .reserved {
+            background-color: #d9534f; /* Red */
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li class="nav-item"><a href="home.html">Home</a></li>
+        <li class="nav-item"><a href="login.html">Login</a></li>
+        <li class="nav-item"><a href="conclusion.html">Reservation</a></li>
+        <li class="nav-item"><a href="cancel.html">Cancellation</a></li>
+        <li class="nav-item"><a href="sub.html">Subscription</a></li>
+        <li class="nav-item"><a href="About.html">About</a></li>
+
+    </ul>
+    <header>
+        <h1>Gym Schedule Reservation</h1>
+    </header>
+    <div class="container">
+        <h2>Available Timeslots</h2>
+        <div class="timeslot available" data-timeslot-id="1" onclick="reserveTimeslot(1)">9:00 AM - 10:00AM</div>
+        <div class="timeslot available" data-timeslot-id="2" onclick="reserveTimeslot(2)">10:00 AM - 11:00 AM</div>
+     
+        <!-- Add more available timeslots -->
+
+        <h2>Reserved Timeslots</h2>
+        <div class="timeslot reserved" data-timeslot-id="4" onclick="cancelReservation(4)">8:00 AM - 9:00 AM(Your Reservation)</div>
+        <!-- Display reserved timeslots here -->
+    </div>
+    <script>
+        function reserveTimeslot(timeslotId) {
+            // Check if the timeslot is already reserved
+            const timeslot = document.querySelector(`[data-timeslot-id="${timeslotId}"]`);
+            if (timeslot.classList.contains("reserved")) {
+                alert("This timeslot is already reserved. Please choose another one.");
+                return;
+            }
+
+            // Send a reservation request to the server
+            // You would typically use AJAX to send data to a back-end for processing
+
+            // For this example, let's simply change the class to "reserved"
+            timeslot.classList.remove("available");
+            timeslot.classList.add("reserved");
+        }
+
+        function cancelReservation(timeslotId) {
+            // Check if the timeslot is your reservation (you may add authentication for this)
+            const timeslot = document.querySelector(`[data-timeslot-id="${timeslotId}"]`);
+            if (timeslot.classList.contains("reserved")) {
+                if (confirm("Do you want to cancel your reservation?")) {
+                    // Send a cancellation request to the server
+                    // You would typically use AJAX to send data to a back-end for processing
+
+                    // For this example, let's simply change the class to "available"
+                    timeslot.classList.remove("reserved");
+                    timeslot.classList.add("available");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
